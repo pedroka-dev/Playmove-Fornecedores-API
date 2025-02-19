@@ -1,4 +1,12 @@
+using Fornecedores_ORM;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+FornecedoresDBContext db = new();
+var pendingChanges = db.Database.GetPendingMigrations();
+if (pendingChanges.Any())
+    db.Database.Migrate();
 
 
 builder.Services.AddControllers();
