@@ -39,8 +39,7 @@ Neste projeto, as duas formas que o usuário podem interagir com a aplicação s
 A WebAPI por sua vez tem requisições tratadas pelo Controller, que realizada lógica de operações diretamente com a camada ORM.
 Por sua vez, a camada ORM gerencia migrations e a entrada ou saída de valores no banco de dados através do EntityFramework 6.
 
-![Projeto playmove drawio](https://github.com/user-attachments/assets/4e0eabf8-0fbf-48bd-958d-135eecaac029)
-
+![Arquiteture projeto Playmove png](https://github.com/user-attachments/assets/47167a98-7b59-41e9-a210-a275db89ce6d)
 
 
 # Sprint Planning
