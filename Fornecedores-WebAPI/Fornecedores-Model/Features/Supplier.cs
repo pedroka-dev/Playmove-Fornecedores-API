@@ -1,7 +1,7 @@
 ﻿
 namespace Fornecedores_Model.Features
 {
-    internal class Supplier : BaseEntity
+    public class Supplier : BaseEntity
     {
         public string Name;
         public string Email;

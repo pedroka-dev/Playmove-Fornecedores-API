@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fornecedores-WebAPI", "Fornecedores-WebAPI\Fornecedores-WebAPI.csproj", "{DD86E040-2C04-475C-8638-37B9BC2B80CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75B78137-F311-48A1-9754-E27B2FAE0048} = {75B78137-F311-48A1-9754-E27B2FAE0048}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fornecedores-Model", "Fornecedores-Model\Fornecedores-Model.csproj", "{64C7CDAD-5021-4E8F-BC23-2764C52ED47B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fornecedores-ORM", "Fornecedores-ORM\Fornecedores-ORM.csproj", "{75B78137-F311-48A1-9754-E27B2FAE0048}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,14 @@ Global
 		{DD86E040-2C04-475C-8638-37B9BC2B80CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD86E040-2C04-475C-8638-37B9BC2B80CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD86E040-2C04-475C-8638-37B9BC2B80CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C7CDAD-5021-4E8F-BC23-2764C52ED47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C7CDAD-5021-4E8F-BC23-2764C52ED47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C7CDAD-5021-4E8F-BC23-2764C52ED47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C7CDAD-5021-4E8F-BC23-2764C52ED47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B78137-F311-48A1-9754-E27B2FAE0048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B78137-F311-48A1-9754-E27B2FAE0048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B78137-F311-48A1-9754-E27B2FAE0048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B78137-F311-48A1-9754-E27B2FAE0048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
