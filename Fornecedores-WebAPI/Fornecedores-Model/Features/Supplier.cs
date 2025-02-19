@@ -3,8 +3,16 @@ namespace Fornecedores_Model.Features
 {
     public class Supplier : BaseEntity
     {
-        public string Name;
-        public string Email;
+        public string Name { get; set; }
+        public string Email { get; set; }
+
+        //public Supplier() { }
+
+        public Supplier(string name, string email)
+        {
+            Name = name;
+            Email = email;
+        }
 
         public override string Validate()
         {
@@ -26,7 +34,6 @@ namespace Fornecedores_Model.Features
         public override bool Equals(object? obj)
         {
             return obj is Supplier supplier &&
-                   id == supplier.id &&
                    Id == supplier.Id &&
                    Name == supplier.Name &&
                    Email == supplier.Email;
@@ -34,7 +41,8 @@ namespace Fornecedores_Model.Features
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(id, Id, Name, Email);
+            return HashCode.Combine(Id, Name, Email);
         }
+
     }
 }

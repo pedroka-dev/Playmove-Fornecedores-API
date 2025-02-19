@@ -1,6 +1,33 @@
 @Fornecedores_WebAPI_HostAddress = http://localhost:5274
 
-GET {{Fornecedores_WebAPI_HostAddress}}/weatherforecast/
+### Retorna todos os fornecedores
+GET {{Fornecedores_WebAPI_HostAddress}}/fornecedores
 Accept: application/json
 
-###
+### Retorna um fornecedor específico pelo ID
+GET {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+Accept: application/json
+
+### Adiciona um novo fornecedor
+POST {{Fornecedores_WebAPI_HostAddress}}/fornecedores
+Content-Type: application/json
+
+{
+  "name": "Fornecedor Teste",
+  "email": "teste@fornecedor.com",
+  "phone": "(11) 99999-9999"
+}
+
+### Atualiza um fornecedor existente pelo ID
+PUT {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+Content-Type: application/json
+
+{
+  "name": "Fornecedor Atualizado",
+  "email": "atualizado@fornecedor.com",
+  "phone": "(11) 98888-8888"
+}
+
+### Remove um fornecedor pelo ID
+DELETE {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+

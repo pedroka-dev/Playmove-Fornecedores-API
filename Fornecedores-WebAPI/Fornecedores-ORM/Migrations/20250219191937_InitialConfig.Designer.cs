@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Fornecedores_ORM.Migrations
 {
-    [DbContext(typeof(FornecedoresDBContext))]
+    [DbContext(typeof(SupplierDBContext))]
     [Migration("20250219191937_InitialConfig")]
     partial class InitialConfig
     {

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Fornecedores_ORM
 {
-    public class FornecedoresDBContext : DbContext
+    public class SupplierDBContext : DbContext
     {
         public string DbPath { get; }
 
-        public FornecedoresDBContext()
+        public SupplierDBContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);

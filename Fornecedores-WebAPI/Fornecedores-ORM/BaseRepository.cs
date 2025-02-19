@@ -6,10 +6,10 @@ namespace Fornecedores_ORM
 {
     public class BaseRepository<T> where T : BaseEntity
     {
-        protected readonly FornecedoresDBContext dbContext;
+        protected readonly SupplierDBContext dbContext;
         protected readonly DbSet<T> dbSet;
 
-        public BaseRepository(FornecedoresDBContext db)
+        public BaseRepository(SupplierDBContext db)
         {
             dbContext = db;
             dbSet = db.Set<T>();
