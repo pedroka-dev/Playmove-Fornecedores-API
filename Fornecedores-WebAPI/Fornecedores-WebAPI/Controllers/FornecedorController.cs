@@ -18,7 +18,7 @@ namespace Fornecedores_WebAPI.Controllers
         }
 
         /// <summary>
-        /// Recebe todos os Fornecedores
+        /// Retorna todos os fornecedores
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -32,7 +32,7 @@ namespace Fornecedores_WebAPI.Controllers
         }
 
         /// <summary>
-        /// Recebe fornecedor de ID expecífico
+        /// Retorna um fornecedor específico pelo ID
         /// </summary>
         /// <param name="id">Identificador único. Obrigatório</param>
         /// <returns></returns>
@@ -47,7 +47,7 @@ namespace Fornecedores_WebAPI.Controllers
         }
 
         /// <summary>
-        /// Adiciona um fornecedor novo
+        /// Adiciona um novo fornecedor
         /// </summary>
         /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
         /// <returns></returns>
@@ -70,7 +70,7 @@ namespace Fornecedores_WebAPI.Controllers
 
 
         /// <summary>
-        /// Atualiza um fornecedor existente
+        /// Atualiza um fornecedor existente pelo ID
         /// </summary>
         /// <param name="id">Identificador único. Obrigatório.</param>
         /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
@@ -94,7 +94,7 @@ namespace Fornecedores_WebAPI.Controllers
         }
 
         /// <summary>
-        /// Remove um fornecedor existente
+        /// Remove um fornecedor pelo ID
         /// </summary>
         /// <param name="id">Identificador único. Obrigatório.</param>
         /// <returns></returns>
