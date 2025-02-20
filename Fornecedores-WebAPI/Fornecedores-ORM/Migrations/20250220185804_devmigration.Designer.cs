@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fornecedores_ORM.Migrations
 {
     [DbContext(typeof(FornecedorDBContext))]
-    [Migration("20250220021614_InitialConfig")]
-    partial class InitialConfig
+    [Migration("20250220185804_devmigration")]
+    partial class devmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace Fornecedores_ORM.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
 
-            modelBuilder.Entity("Fornecedores_Model.Features.Forneceddor", b =>
+            modelBuilder.Entity("Fornecedores_Model.Features.Fornecedor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,6 +36,32 @@ namespace Fornecedores_ORM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TBFORNECEDOR", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "joao.silva@email.com",
+                            Nome = "João Silva"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "maria.oliveira@email.com",
+                            Nome = "Maria Oliveira"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "carlos.santos@email.com",
+                            Nome = "Carlos Santos"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Email = "ana.souza@email.com",
+                            Nome = "Ana Souza"
+                        });
                 });
 #pragma warning restore 612, 618
         }

@@ -10,6 +10,17 @@ builder.Services.AddDbContext<FornecedorDBContext>();
 builder.Services.AddScoped<BaseRepository<Fornecedor>>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -59,4 +70,5 @@ using (var scope = app.Services.CreateScope())
         db.Database.Migrate();
 }
 
+app.UseCors("AllowAllOrigins");
 app.Run();
