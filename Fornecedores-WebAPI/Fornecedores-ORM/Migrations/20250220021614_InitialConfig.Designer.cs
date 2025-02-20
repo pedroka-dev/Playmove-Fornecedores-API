@@ -2,21 +2,24 @@
 using Fornecedores_ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace Fornecedores_ORM.Migrations
 {
-    [DbContext(typeof(FornecedoresDBContext))]
-    partial class FornecedoresDBContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(FornecedorDBContext))]
+    [Migration("20250220021614_InitialConfig")]
+    partial class InitialConfig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
 
-            modelBuilder.Entity("Fornecedores_Model.Features.Supplier", b =>
+            modelBuilder.Entity("Fornecedores_Model.Features.Forneceddor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -26,13 +29,13 @@ namespace Fornecedores_ORM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(250)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("VARCHAR(250)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TBSUPPLIER", (string)null);
+                    b.ToTable("TBFORNECEDOR", (string)null);
                 });
 #pragma warning restore 612, 618
         }

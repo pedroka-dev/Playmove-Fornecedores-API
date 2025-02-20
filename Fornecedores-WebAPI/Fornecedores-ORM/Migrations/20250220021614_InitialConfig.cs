@@ -11,17 +11,17 @@ namespace Fornecedores_ORM.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TBSUPPLIER",
+                name: "TBFORNECEDOR",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Email = table.Column<string>(type: "VARCHAR(250)", nullable: false),
-                    Name = table.Column<string>(type: "VARCHAR(250)", nullable: false)
+                    Nome = table.Column<string>(type: "VARCHAR(250)", nullable: false),
+                    Email = table.Column<string>(type: "VARCHAR(250)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TBSUPPLIER", x => x.Id);
+                    table.PrimaryKey("PK_TBFORNECEDOR", x => x.Id);
                 });
         }
 
@@ -29,7 +29,7 @@ namespace Fornecedores_ORM.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TBSUPPLIER");
+                name: "TBFORNECEDOR");
         }
     }
 }
