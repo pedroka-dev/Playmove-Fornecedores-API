@@ -7,7 +7,7 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<FornecedorDBContext>();
-builder.Services.AddScoped<BaseRepository<Forneceddor>>();
+builder.Services.AddScoped<BaseRepository<Fornecedor>>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
