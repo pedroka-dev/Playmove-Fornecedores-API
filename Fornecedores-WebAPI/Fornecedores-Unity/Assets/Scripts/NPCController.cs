@@ -1,17 +1,26 @@
 
 using Fornecedores_Model.Features;
+using TMPro;
 using UnityEngine;
 
 public class FornecedorNPC : MonoBehaviour
 {
-    Fornecedor fornecedor = new Fornecedor("TEST","TEST");
-    // Start is called before the first frame update
-    void Start()
+    public Fornecedor fornecedor;
+    private TextMeshPro nameLabel;
+    private TextMeshPro emailLabel;
+
+    private void Awake()
     {
-        
+        nameLabel = transform.Find("NameLabel")?.GetComponent<TextMeshPro>();
+        emailLabel = transform.Find("EmailLabel")?.GetComponent<TextMeshPro>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        nameLabel.text = fornecedor.Nome;
+        emailLabel.text = fornecedor.Email;
+    }
+
     void Update()
     {
         
