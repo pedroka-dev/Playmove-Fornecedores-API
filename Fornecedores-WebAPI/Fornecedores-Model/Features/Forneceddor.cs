@@ -1,11 +1,12 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace Fornecedores_Model.Features
 {
     public class Forneceddor : BaseEntity
     {
         public string Nome { get; set; }
         public string Email { get; set; }
-
 
         public Forneceddor(string nome, string email)
         {
@@ -18,11 +19,11 @@ namespace Fornecedores_Model.Features
             var result = "";
             if (string.IsNullOrWhiteSpace(Nome))
             {
-                result += "* Atributo Email não pode ser nulo ou espaço em branco.\n";
+                result += "Atributo Nome não pode ser nulo ou espaço em branco.\n";
             }
             if (string.IsNullOrEmpty(Email))        //todo: real email validation
             {
-                result += "* Atributo Email não pode ser nulo ou espaço em branco.\n";
+                result += "Atributo Email não pode ser nulo ou espaço em branco.\n";
             }
             if (result == "")
                 result = "VALID";

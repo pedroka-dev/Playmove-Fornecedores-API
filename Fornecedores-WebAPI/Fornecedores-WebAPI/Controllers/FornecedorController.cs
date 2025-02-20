@@ -17,6 +17,10 @@ namespace Fornecedores_WebAPI.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Recebe todos os Fornecedores
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<IEnumerable<Forneceddor>> GetAll()
         {
@@ -27,6 +31,11 @@ namespace Fornecedores_WebAPI.Controllers
             return Ok(fornecedores);
         }
 
+        /// <summary>
+        /// Recebe fornecedor de ID expecífico
+        /// </summary>
+        /// <param name="id">Identificador único. Obrigatório</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public ActionResult<Forneceddor> GetById(int id)
         {
@@ -37,6 +46,11 @@ namespace Fornecedores_WebAPI.Controllers
             return Ok(fornecedor);
         }
 
+        /// <summary>
+        /// Adiciona um fornecedor novo
+        /// </summary>
+        /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult<Forneceddor> Create([FromBody] Forneceddor fornecedor)
         {
@@ -54,6 +68,13 @@ namespace Fornecedores_WebAPI.Controllers
             return CreatedAtAction(nameof(GetById), new { id = fornecedor.Id }, fornecedor);
         }
 
+
+        /// <summary>
+        /// Atualiza um fornecedor existente
+        /// </summary>
+        /// <param name="id">Identificador único. Obrigatório.</param>
+        /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] Forneceddor fornecedor)
         {
@@ -72,6 +93,11 @@ namespace Fornecedores_WebAPI.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Remove um fornecedor existente
+        /// </summary>
+        /// <param name="id">Identificador único. Obrigatório.</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

@@ -11,21 +11,17 @@ Accept: application/json
 ### Adiciona um novo fornecedor
 POST {{Fornecedores_WebAPI_HostAddress}}/fornecedores
 Content-Type: application/json
-
 {
-  "name": "Fornecedor Teste",
+  "nome": "Fornecedor Teste",
   "email": "teste@fornecedor.com",
-  "phone": "(11) 99999-9999"
 }
 
 ### Atualiza um fornecedor existente pelo ID
 PUT {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
 Content-Type: application/json
-
 {
-  "name": "Fornecedor Atualizado",
+  "nome": "Fornecedor Atualizado",
   "email": "atualizado@fornecedor.com",
-  "phone": "(11) 98888-8888"
 }
 
 ### Remove um fornecedor pelo ID
