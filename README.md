@@ -105,6 +105,8 @@ Todas as chamadas demonstram estar funcionando.
 No projeto Unity, foi possível pegar os dados da API através da utilização de método GET da biblioteca UnityWebRequest.
 Após pegarmos a lista de fornecedores, é instanciado vários personagens "Fornecedores" em posição aleatória pelo mapa.
 
+Essa etapa pode ser testada abrindo o projeto do jogo no Unity versão 2022.2.20f1 ou [através da execução direta das binaries que disponibilizei na aba do Github de release](https://github.com/pedroka-dev/Playmove-Fornecedores-API/releases/tag/binary) em uma VM 
+
 ![image](https://github.com/user-attachments/assets/0a33c196-bb72-4407-bc1d-fe1cb9feffd2)
 ![image](https://github.com/user-attachments/assets/39cf53dc-3f8a-4d89-9dfc-3b2cb38e2075)
 ![image](https://github.com/user-attachments/assets/8b6e032f-53e0-4011-be0f-a15cc06e26ef)
