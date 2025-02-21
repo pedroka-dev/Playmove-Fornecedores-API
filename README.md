@@ -5,7 +5,13 @@ Gerenciamento de banco é realizado automaticamente utilizando Entity Framework 
 
 Na API, foi desenvolvido chamadas GET all, GET by id, POST, PUT, DELETE. As chamadas estão propriamente documentas no Swagger da aplicação.
 
-O protótipo de jogo Unity consome os dados, através de chamadas GET all e instancia novos personagens para cada "Fornecedor" e seus dados. Esse projeto foi criado no Unity versão 2022.2.20f1.
+![image](https://github.com/user-attachments/assets/1d2594f8-ac02-4013-8012-0fca74cea8a5)
+
+
+O protótipo de jogo foi desenvolvido no Unity versão 2022.2.20f1 e consome os dados da API através de chamadas GET all. Ao receber os dados, é instanciado novos personagens para cada "Fornecedor".
+
+
+![image](https://github.com/user-attachments/assets/778dfe23-0155-4f54-a712-c0b28265fa42)
 
 
 # Requisitos
@@ -132,12 +138,6 @@ Arvores, pedras e folhas que estão espalhadas pelo mapa também mudam aleatoria
 ![image](https://github.com/user-attachments/assets/66f932b3-bdff-4781-9b74-7fbf8ebf1926)
 ![image](https://github.com/user-attachments/assets/d24f3e57-ee94-4a61-a4ce-8003f27e89ca)
 ![image](https://github.com/user-attachments/assets/90cd227d-d6a8-4938-9b37-e626fcbd7f10)
-
-
-### Resultado final
-![image](https://github.com/user-attachments/assets/778dfe23-0155-4f54-a712-c0b28265fa42)
-
-https://github.com/user-attachments/assets/96abc38a-b971-4ee8-8202-afeecad51a65
 
 
 # Débito técnico
