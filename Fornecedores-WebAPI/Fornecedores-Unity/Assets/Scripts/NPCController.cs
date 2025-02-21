@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class NPCController : MonoBehaviour
 {
+    List<SpriteRenderer> bodyAndHairRenderer;
+
+    TextMeshPro nameLabel;
+    TextMeshPro emailLabel;
+
     public Fornecedor fornecedor;
 
-    List<SpriteRenderer> bodyAndHairRenderer;
-    private TextMeshPro nameLabel;
-    private TextMeshPro emailLabel;
 
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class NPCController : MonoBehaviour
             Random.Range(0f, 1f), // Blue
             1f // Alpha (fully opaque)
         );
+
         nameLabel.color = emailLabel.color = randomColor;
     }
 
