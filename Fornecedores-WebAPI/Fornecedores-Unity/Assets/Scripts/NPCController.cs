@@ -13,6 +13,15 @@ public class FornecedorNPC : MonoBehaviour
     {
         nameLabel = transform.Find("NameLabel")?.GetComponent<TextMeshPro>();
         emailLabel = transform.Find("EmailLabel")?.GetComponent<TextMeshPro>();
+
+        Color randomColor = new Color(
+            Random.Range(0f, 1f), // Red
+            Random.Range(0f, 1f), // Green
+            Random.Range(0f, 1f), // Blue
+            1f // Alpha (fully opaque)
+        );
+
+        nameLabel.color = emailLabel.color = randomColor;
     }
 
     void Start()

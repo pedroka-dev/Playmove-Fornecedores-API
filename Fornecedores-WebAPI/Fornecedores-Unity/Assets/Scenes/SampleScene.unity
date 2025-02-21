@@ -1192,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243923202954842497, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 243923202954842497, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_SortingOrder
@@ -1200,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243923202954842497, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1794618759
+      value: 941051863
       objectReference: {fileID: 0}
     - target: {fileID: 243923202954842497, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_DynamicOccludee
@@ -1318,7 +1318,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
     - target: {fileID: 7858456136158543071, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_fontStyle
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7858456136158543071, guid: fc76f3a54c653364488422a321e9c9de, type: 3}
       propertyPath: m_fontColor.b

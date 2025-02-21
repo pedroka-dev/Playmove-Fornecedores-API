@@ -50,3 +50,6 @@ TagManager:
   - name: Charcter
     uniqueID: 2500348537
     locked: 0
+  - name: Text
+    uniqueID: 941051863
+    locked: 0
