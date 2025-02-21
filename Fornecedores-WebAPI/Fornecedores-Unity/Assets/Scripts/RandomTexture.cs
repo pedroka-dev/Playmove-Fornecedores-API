@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomTexture : MonoBehaviour
+public class RandomSprite : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
     public List<Sprite> spriteList;
