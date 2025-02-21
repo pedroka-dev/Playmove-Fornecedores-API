@@ -1,5 +1,6 @@
 ﻿namespace Fornecedores_Model
 {
+    [System.Serializable]
     public abstract class BaseEntity
     {
         protected int id;

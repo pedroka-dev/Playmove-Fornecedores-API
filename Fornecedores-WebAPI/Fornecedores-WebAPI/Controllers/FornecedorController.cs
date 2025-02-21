@@ -8,10 +8,10 @@ namespace Fornecedores_WebAPI.Controllers
     [Route("[controller]")]
     public class FornecedorController : ControllerBase
     {
-        private readonly BaseRepository<Forneceddor> _repository;
+        private readonly BaseRepository<Fornecedor> _repository;
         private readonly ILogger<FornecedorController> _logger;
 
-        public FornecedorController(BaseRepository<Forneceddor> repository, ILogger<FornecedorController> logger)
+        public FornecedorController(BaseRepository<Fornecedor> repository, ILogger<FornecedorController> logger)
         {
             _repository = repository;
             _logger = logger;
@@ -22,7 +22,7 @@ namespace Fornecedores_WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<Forneceddor>> GetAll()
+        public ActionResult<IEnumerable<Fornecedor>> GetAll()
         {
             var fornecedores = _repository.SelectAll();
             if (fornecedores == null || fornecedores.Count == 0)
@@ -37,7 +37,7 @@ namespace Fornecedores_WebAPI.Controllers
         /// <param name="id">Identificador único. Obrigatório</param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult<Forneceddor> GetById(int id)
+        public ActionResult<Fornecedor> GetById(int id)
         {
             var fornecedor = _repository.SelectById(id);
             if (fornecedor == null)
@@ -52,7 +52,7 @@ namespace Fornecedores_WebAPI.Controllers
         /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult<Forneceddor> Create([FromBody] Forneceddor fornecedor)
+        public ActionResult<Fornecedor> Create([FromBody] Fornecedor fornecedor)
         {
             if (fornecedor == null)
                 return BadRequest("Dados inválidos.");
@@ -76,7 +76,7 @@ namespace Fornecedores_WebAPI.Controllers
         /// <param name="fornecedor">Objeto fornecedor, com nome e email. Obrigatório</param>
         /// <returns></returns>
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] Forneceddor fornecedor)
+        public IActionResult Update(int id, [FromBody] Fornecedor fornecedor)
         {
             if (fornecedor == null)
                 return BadRequest("Dados inválidos.");

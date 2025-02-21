@@ -1,24 +1,24 @@
 @Fornecedores_WebAPI_HostAddress = http://localhost:5274
 
-GET {{Fornecedores_WebAPI_HostAddress}}/fornecedores
+GET {{Fornecedores_WebAPI_HostAddress}}/fornecedor
 Accept: application/json
 
-GET {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+GET {{Fornecedores_WebAPI_HostAddress}}/fornecedor/1
 Accept: application/json
 
-POST {{Fornecedores_WebAPI_HostAddress}}/fornecedores
+POST {{Fornecedores_WebAPI_HostAddress}}/fornecedor
 Content-Type: application/json
 {
   "nome": "Fornecedor Teste",
   "email": "teste@fornecedor.com",
 }
 
-PUT {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+PUT {{Fornecedores_WebAPI_HostAddress}}/fornecedor/1
 Content-Type: application/json
 {
   "nome": "Fornecedor Atualizado",
   "email": "atualizado@fornecedor.com",
 }
 
-DELETE {{Fornecedores_WebAPI_HostAddress}}/fornecedores/1
+DELETE {{Fornecedores_WebAPI_HostAddress}}/fornecedor/1
 

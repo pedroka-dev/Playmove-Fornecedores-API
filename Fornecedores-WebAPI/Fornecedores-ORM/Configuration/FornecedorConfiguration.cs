@@ -5,9 +5,9 @@ using Fornecedores_Model.Features;
 
 namespace Fornecedores_ORM.Configuration
 {
-    public class FornecedorConfiguration : IEntityTypeConfiguration<Forneceddor>
+    public class FornecedorConfiguration : IEntityTypeConfiguration<Fornecedor>
     {
-        public void Configure(EntityTypeBuilder<Forneceddor> builder)
+        public void Configure(EntityTypeBuilder<Fornecedor> builder)
         {
             builder.ToTable("TBFORNECEDOR");
 

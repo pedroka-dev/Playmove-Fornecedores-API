@@ -1,14 +1,22 @@
 ﻿
-using System.ComponentModel.DataAnnotations;
-
 namespace Fornecedores_Model.Features
 {
-    public class Forneceddor : BaseEntity
+    [System.Serializable]
+    public class Fornecedor : BaseEntity
     {
         public string Nome { get; set; }
         public string Email { get; set; }
 
-        public Forneceddor(string nome, string email)
+        public Fornecedor() {}
+
+        public Fornecedor(int id, string nome, string email)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+        }
+
+        public Fornecedor(string nome, string email)
         {
             Nome = nome;
             Email = email;
@@ -33,7 +41,7 @@ namespace Fornecedores_Model.Features
 
         public override bool Equals(object? obj)
         {
-            return obj is Forneceddor fornecedor &&
+            return obj is Fornecedor fornecedor &&
                    Id == fornecedor.Id &&
                    Nome == fornecedor.Nome &&
                    Email == fornecedor.Email;
