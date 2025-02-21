@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6927822079033317408}
   - component: {fileID: 301392219791469739}
   - component: {fileID: 4780371288905410734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1397334259
+  m_SortingLayerID: -1794618759
   m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1364552656, guid: 461ef539b9ce4ff498665cffccbb85fc, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1031210279, guid: 0f1fafd59f945054089d8949596505b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 1867670789774634592}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb8e0e1fd1aa7fa47a3a43006685febd, type: 2}
+  m_Controller: {fileID: 9100000, guid: f0f7b77a0de420e4dbdd0dcc16a0749a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6242799947419383590}
   - component: {fileID: 1666081662113099872}
   - component: {fileID: 352310538241213548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,9 +215,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2844732780009925952}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c154341b4f15ebf45ba1767f65900e10, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ccdb89b541aed248825ba1b1cfbf787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fornecedor:
+    nome: 
+    email: 
 --- !u!1 &4656285706232267298
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +232,7 @@ GameObject:
   - component: {fileID: 5406765169548971649}
   - component: {fileID: 5641979063417930997}
   - component: {fileID: 2314877648059836843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EmailLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6667023703781925262, guid: 57d690a7731991345aa59051c623dda5, type: 2}
+  - {fileID: -3733979978127081909, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -293,8 +296,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1397334259
-  m_SortingLayer: 3
+  m_SortingLayerID: 941051863
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2314877648059836843
@@ -319,15 +322,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: email@email.com
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57d690a7731991345aa59051c623dda5, type: 2}
-  m_sharedMaterial: {fileID: 6667023703781925262, guid: 57d690a7731991345aa59051c623dda5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
+  m_sharedMaterial: {fileID: -3733979978127081909, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294903552
-  m_fontColor: {r: 0, g: 0.026675701, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -350,7 +353,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -399,8 +402,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5817898534708737576}
   - component: {fileID: 6195182542279687260}
-  - component: {fileID: 4293614169932337410}
-  m_Layer: 0
+  - component: {fileID: 2442812347380390925}
+  m_Layer: 6
   m_Name: NameLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +449,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6667023703781925262, guid: 57d690a7731991345aa59051c623dda5, type: 2}
+  - {fileID: -3733979978127081909, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -464,11 +467,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1397334259
-  m_SortingLayer: 3
+  m_SortingLayerID: 941051863
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4293614169932337410
+--- !u!114 &2442812347380390925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -490,15 +493,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nome Sobrenome
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57d690a7731991345aa59051c623dda5, type: 2}
-  m_sharedMaterial: {fileID: 6667023703781925262, guid: 57d690a7731991345aa59051c623dda5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
+  m_sharedMaterial: {fileID: -3733979978127081909, guid: 29a508a71a0159f4e9319e4d2123f1b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294903552
-  m_fontColor: {r: 0, g: 0.02745098, b: 1, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -571,7 +574,7 @@ GameObject:
   - component: {fileID: 8115658222492578053}
   - component: {fileID: 5550344464518379770}
   - component: {fileID: 6348273290897127219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,15 +634,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1397334259
+  m_SortingLayerID: -1794618759
   m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 829349619, guid: 14a6695dad5a916489c653f4fbfaad0e, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -313280913, guid: 360b893e3ace9d644b8e7f4a5357c7d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9.6, y: 6.4}
+  m_Size: {x: 1.3, y: 1.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -655,7 +658,7 @@ Animator:
   m_GameObject: {fileID: 7739175347611837130}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f5714f6565f5614d8c1b725c4cb52ee, type: 2}
+  m_Controller: {fileID: 9100000, guid: ffc1d6a669cfdf74585951ab018a9a82, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

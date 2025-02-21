@@ -24,7 +24,7 @@ namespace Fornecedores_ORM
 
             //Popula inicialmente o banco, somente 1 vez. Facilita nos meus testes e do avaliador
             modelBuilder.Entity<Fornecedor>().HasData(
-                new Fornecedor(1, "João Silva", "joao.silva@email.com"),
+                new Fornecedor(1, "Joao Silva", "joao.silva@email.com"),
                 new Fornecedor(2, "Maria Oliveira", "maria.oliveira@email.com"),
                 new Fornecedor(3, "Carlos Santos", "carlos.santos@email.com"),
                 new Fornecedor(4, "Ana Souza", "ana.souza@email.com")

@@ -63,7 +63,7 @@ public class WorldController : MonoBehaviour
         foreach(Fornecedor fornecedor in fornecedores)
         {
             var npc = Instantiate(fornecedorNpcPrefab, GetRandomScreenPosition(), new Quaternion());
-            npc.GetComponent<FornecedorNPC>().fornecedor = fornecedor;
+            npc.GetComponent<NPCController>().fornecedor = fornecedor;
         }
     }
 
