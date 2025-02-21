@@ -4,18 +4,25 @@ using Fornecedores_Model.Features;
 using Leguar.TotalJSON;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using Random = UnityEngine.Random;
 
 public class WorldController : MonoBehaviour
 {
-    List<Fornecedor> fornecedores;
+    private List<Fornecedor> fornecedores;
+    private TextMeshPro mensagemErro;
 
     public int defaultPort = 5274;
     public int maxSpawnXPosition = 0;
     public int maxSpawnYPosition = 0;
     public GameObject fornecedorNpcPrefab;
+
+    private void Awake()
+    {
+        mensagemErro = GetComponentInChildren<TextMeshPro>();
+    }
 
     void Start()
     {
@@ -43,6 +50,8 @@ public class WorldController : MonoBehaviour
             }
             else
             {
+                mensagemErro.enabled = true;
+                mensagemErro.text += $"{request.method} \n {request.url} \n {request.result} \n{request.error} "; 
                 Debug.LogError("Failed to fetch fornecedores: " + request.error);
             }
         }
