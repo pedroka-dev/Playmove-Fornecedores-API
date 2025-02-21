@@ -10,7 +10,7 @@ public class RandomSprite : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        int randomIndex = new System.Random().Next(0, spriteList.Count);
+        int randomIndex = Random.Range(0, spriteList.Count);
         spriteRenderer.sprite = spriteList[randomIndex];
     }
 
