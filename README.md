@@ -127,6 +127,8 @@ Arvores, pedras e folhas que estão espalhadas pelo mapa também mudam aleatoria
 ### Resultado final
 ![image](https://github.com/user-attachments/assets/778dfe23-0155-4f54-a712-c0b28265fa42)
 
+https://github.com/user-attachments/assets/96abc38a-b971-4ee8-8202-afeecad51a65
+
 
 # Débito técnico
 Algumas tarefas planejadas não foram possíveis de terminar, incluindo a ideia de personagens caminhando (com animação) e cabelos aleatórios para cada personagem instanciado. 
