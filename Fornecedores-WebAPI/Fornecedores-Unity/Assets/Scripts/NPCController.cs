@@ -17,8 +17,8 @@ public class FornecedorNPC : MonoBehaviour
 
     void Start()
     {
-        nameLabel.text = fornecedor.Nome;
-        emailLabel.text = fornecedor.Email;
+        nameLabel.text = fornecedor.nome;
+        emailLabel.text = fornecedor.email;
     }
 
     void Update()

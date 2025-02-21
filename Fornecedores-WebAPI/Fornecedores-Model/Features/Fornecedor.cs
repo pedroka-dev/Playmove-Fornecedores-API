@@ -1,12 +1,20 @@
 ﻿
-using System.ComponentModel.DataAnnotations;
-
 namespace Fornecedores_Model.Features
 {
+    [System.Serializable]
     public class Fornecedor : BaseEntity
     {
         public string Nome { get; set; }
         public string Email { get; set; }
+
+        public Fornecedor() {}
+
+        public Fornecedor(int id, string nome, string email)
+        {
+            Id = id;
+            Nome = nome;
+            Email = email;
+        }
 
         public Fornecedor(string nome, string email)
         {

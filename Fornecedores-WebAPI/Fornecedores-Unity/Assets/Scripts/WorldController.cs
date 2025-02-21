@@ -1,6 +1,7 @@
 
 
 using Fornecedores_Model.Features;
+using Leguar.TotalJSON;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,15 +19,11 @@ public class WorldController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(FetchFornecedores(GetFornecedores()));
+        StartCoroutine(FetchFornecedores());
     }
 
-    private List<Fornecedor> GetFornecedores()
-    {
-        return fornecedores;
-    }
 
-    IEnumerator FetchFornecedores(List<Fornecedor> fornecedores)
+    IEnumerator FetchFornecedores()
     {
         string url = $"http://localhost:{defaultPort}/fornecedor";
         using (UnityWebRequest request = UnityWebRequest.Get(url))
@@ -39,6 +36,8 @@ public class WorldController : MonoBehaviour
             if (request.result == UnityWebRequest.Result.Success)
             {
                 string json = request.downloadHandler.text;
+                fornecedores = DeserializeFornecedores(json);
+                
                 Debug.Log("Fornecedores loaded: " + fornecedores.Count);
                 SpawnFornecedores();
             }
@@ -64,5 +63,22 @@ public class WorldController : MonoBehaviour
         float xPosition = Random.Range(-maxSpawnXPosition, maxSpawnXPosition);
         float yPosition = Random.Range(-maxSpawnYPosition, maxSpawnYPosition);
         return new Vector2(xPosition, yPosition);
+    }
+
+
+    //Unity tem um problema gigantesco em deserializar Listas em JSON.
+    //Não era possível utilizar bibliotecas como Newtonsoft e outras soluções similares
+    //Após horas, consegui solucionar com uma gambiarra utilizando código de terceiros
+    private List<Fornecedor> DeserializeFornecedores(string jsonText)
+    {
+        jsonText = jsonText.Trim('[').Trim(']').Replace("},", "} ");
+        JSON[] jsonObjects = JSON.ParseStringToMultiple(jsonText);
+        List<Fornecedor> fornecedoresRetorno = new();
+        foreach (JSON jsonObj in jsonObjects)
+        {
+            Fornecedor fornecedor = new(jsonObj.GetString("nome"), jsonObj.GetString("email"));
+            fornecedoresRetorno.Add(fornecedor);
+        }
+        return fornecedoresRetorno;
     }
 }
