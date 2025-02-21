@@ -43,9 +43,4 @@ public class NPCController : MonoBehaviour
         nameLabel.text = fornecedor.nome;
         emailLabel.text = fornecedor.email;
     }
-
-    void Update()
-    {
-        
-    }
 }

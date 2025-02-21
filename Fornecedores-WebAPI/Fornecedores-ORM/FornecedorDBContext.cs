@@ -30,9 +30,6 @@ namespace Fornecedores_ORM
                 new Fornecedor(4, "Ana Souza", "ana.souza@email.com")
             );
         }
-
-
-
     }
 }
 
