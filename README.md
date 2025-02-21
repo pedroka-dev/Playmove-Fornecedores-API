@@ -1,3 +1,13 @@
+# Introdução
+Esse proje C# ASP.NET tem o objetivo de demonstrar a conexão entre API e um protótipo de jogo Unity, utilizando como exemplo uma classe "Fornecedor" com os atributos "email" e "nome"
+
+Gerenciamento de banco é realizado automaticamente utilizando Entity Framework 6, com um banco SQLite.
+
+Na API, foi desenvolvido chamadas GET all, GET by id, POST, PUT, DELETE. As chamadas estão propriamente documentas no Swagger da aplicação.
+
+O protótipo de jogo Unity consome os dados, através de chamadas GET all e instancia novos personagens para cada "Fornecedor" e seus dados. Esse projeto foi criado no Unity versão 2022.2.20f1.
+
+
 # Requisitos
 1. Configuração Inicial:
 - Crie um projeto de Web API em C# utilizando ASP.NET Core.
@@ -112,7 +122,7 @@ Essa etapa pode ser testada abrindo o projeto do jogo no Unity versão 2022.2.20
 ![image](https://github.com/user-attachments/assets/8b6e032f-53e0-4011-be0f-a15cc06e26ef)
 ![image](https://github.com/user-attachments/assets/cc1d1dc8-2afe-4abb-808c-79b2eba42507)
 
-O nome e email do personagem mudam de acordo com os dados da API. A cor do texto e direção que o personagem está virado mudam aleatóriamente
+O texto nome e email do personagem mudam de acordo com os dados da API. A cor do texto e direção que o personagem está virado mudam aleatóriamente
 
 ![image](https://github.com/user-attachments/assets/7f8a1914-848b-4d5d-8225-2bca6096281b)
 
