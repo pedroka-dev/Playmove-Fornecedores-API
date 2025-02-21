@@ -1,4 +1,4 @@
-# Requisitos
+![image](https://github.com/user-attachments/assets/b7279dfb-8d5e-4941-9618-c2ed2efd8593)![image](https://github.com/user-attachments/assets/b98f98de-7d68-463b-a431-e06ab441a6fd)# Requisitos
 1. Configuração Inicial:
 - Crie um projeto de Web API em C# utilizando ASP.NET Core.
 - Configure a conexão com o banco de dados (banco de dados da sua escolha).
@@ -50,5 +50,61 @@ Foi criado um quadro Kamban contendo tarefas para as features do projeto. O padr
 * Definições Técnicas: Detalha informações a nível de desenvolvimento, incluindo requisitos a nível de código, o que ser utilizado e qual versão
 * Definições Visuais (se houver): Demonstra um exemplo estético da implementação 
 ![image](https://github.com/user-attachments/assets/73bd4ed6-64e6-485c-981f-3c022ef3b215)
+
+
+# Arquitetura da camada Model
+![image](https://github.com/user-attachments/assets/a0c7a214-82be-4eb8-914f-ca1c71321978)
+
+Para o modelo foi criada a clase abstrata base chamada Entity, com só o atributo Id e metodos comuns. Qualquer classe que fosse criada deveria herdar ela.
+Foi criada também a classe Fornecedor, com atributos nome e email, que herda dessa classe
+
+![image](https://github.com/user-attachments/assets/90d2084a-bc5a-4f1b-acef-33b0ccd68d87)
+![image](https://github.com/user-attachments/assets/fe3f877f-0c62-4d0b-89a3-1718cee8cb29)
+
+# Arquitetura da camada ORM
+![image](https://github.com/user-attachments/assets/2f36777f-8f99-415c-93e2-ee6e8dccc825)
+
+Na camada ORM, utilizamos o Entityframework 6 para fazer automaticammente o gerenciamento de um banco SQLite. 
+Diferente do padrão ADO.NET, após mapear a nossa classe de modelo em um arquivo configuration, o EF6 cuida automaticamente de novas alterações através das migrations criadas com o comando "add-migration nomemigration"
+Para facilitar os testes, foi populado inicialmente o banco por padrão com 4 fornecedores
+
+![image](https://github.com/user-attachments/assets/3337233a-065f-4c22-ba3e-21cbcca4eb4a)
+![image](https://github.com/user-attachments/assets/9bc53951-d015-4899-953c-5ee7010da6f6)
+
+As operações de banco podem ser chamadas através de um repositório genérico.
+
+![image](https://github.com/user-attachments/assets/d0508fca-626d-41e2-99f0-143b9a0fe337)
+
+
+# Arquitetura das camadas WebAPI (Controller + API)
+![image](https://github.com/user-attachments/assets/216f96e3-4c3b-4fde-abbe-dd7853648f38)
+
+A Api provém chamadas GET, POST, PUT e DELETE para o caminho "/fornecedor/" na porta 5274.
+
+![image](https://github.com/user-attachments/assets/adc36754-9a5d-44d4-b248-b88be741ba66)
+
+Essas chamadas, por sua vez, chamam métodos do Controller, que interage diretamente com o repositório da camada ORM
+![image](https://github.com/user-attachments/assets/268f0ef8-dbb3-4c4c-851d-524f1c107cc8)
+
+
+# Swagger
+Ao rodar o projeto e ir para o link http://localhost:5274/swagger/index.html, o desenvolvedor tem acesso as chamadas dessa API. 
+Para melhorar a usabilidade, foi adicionado comentários descritivos na chamada e moodo escuro ao Swagger. 
+Todas as chamadas demonstram estar funcionando.
+![image](https://github.com/user-attachments/assets/1d2594f8-ac02-4013-8012-0fca74cea8a5)
+![image](https://github.com/user-attachments/assets/1fb14a2b-f304-40d9-84bb-383fc1400416)
+![image](https://github.com/user-attachments/assets/5f5839c7-3049-4356-b41b-8d91c412d29d)
+
+
+# Unity Game
+![image](https://github.com/user-attachments/assets/a4f9c59c-0f73-4c54-b4b1-8838f55495e8)
+![image](https://github.com/user-attachments/assets/c5c26c8a-4c28-490b-aaf8-468ea1a49f81)
+
+No projeto Unity, foi possível pegar os dados da API através da utilização de método GET da biblioteca UnityWebRequest.
+Após pegarmos a lista de fornecedores, é instanciado vários personagens "Fornecedores" em posição aleatória pelo mapa.
+![image](https://github.com/user-attachments/assets/0a33c196-bb72-4407-bc1d-fe1cb9feffd2)
+![image](https://github.com/user-attachments/assets/39cf53dc-3f8a-4d89-9dfc-3b2cb38e2075)
+![image](https://github.com/user-attachments/assets/cc1d1dc8-2afe-4abb-808c-79b2eba42507)
+
 
 
